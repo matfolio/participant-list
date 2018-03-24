@@ -46,10 +46,10 @@ class RowEdit extends Component {
   	let {cancel,save} = this.props;
     return (
       <React.Fragment>         
-        <td className="list-item col-md-3"><input type="text" value={this.state.fullname} onChange= {this.handleFullnameChange}/></td>
-        <td className="list-item col-md-3"><input type="email" value={this.state.email} onChange= {this.handleEmailChange}/></td>
-        <td className="list-item col-md-3"><input type="number" value={this.state.phonenumber} onChange= {this.handlePhonenumberChange}/></td>
-        <td className="list-item col-md-3"><div className="center"><span className="cancel center" onClick={cancel}>Cancel</span><span className="save" onClick={save.bind(this,this.state,this.props.index)}>Save</span></div></td>
+        <td className="list-item col-md-3 col-sm-3"><input type="text" value={this.state.fullname} onChange= {this.handleFullnameChange}/></td>
+        <td className="list-item col-md-3 col-sm-3"><input type="email" value={this.state.email} onChange= {this.handleEmailChange}/></td>
+        <td className="list-item col-md-3 col-sm-3"><input type="number" value={this.state.phonenumber} onChange= {this.handlePhonenumberChange}/></td>
+        <td className="list-item col-md-3 col-sm-3"><div className="center"><span className="cancel center" onClick={cancel}>Cancel</span><span className="save" onClick={save.bind(this,this.state,this.props.index)}>Save</span></div></td>
 
       </React.Fragment>
     );

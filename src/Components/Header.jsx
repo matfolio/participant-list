@@ -40,11 +40,11 @@ class Header extends Component {
           <table className="table">
             <tbody className="list">
               <tr>
-                <td className="list-item col-md-3"><input type="text" placeholder="Enter name" name="fullname" ref={input => this.fullname = input}/></td>
-                <td className="list-item col-md-3"><input type="email" placeholder="Enter name" name="email" ref={input => this.email = input}/></td>
-                <td className="list-item col-md-3"><input type="number" placeholder="Enter phonenumber" name="phone" ref={input => this.phonenumber = input}/></td>
-                <td className="list-item col-md-2"><div className="add" onClick={addnew}>Add new</div></td>
-                <td className="list-item¨col-md-1"></td>
+                <td className="list-item col-md-3 col-sm-3"><input type="text" placeholder="Enter name" name="fullname" ref={input => this.fullname = input}/></td>
+                <td className="list-item col-md-3 col-sm-3"><input type="email" placeholder="Enter name" name="email" ref={input => this.email = input}/></td>
+                <td className="list-item col-md-3 col-sm-3"><input type="number" placeholder="Enter phonenumber" name="phone" ref={input => this.phonenumber = input}/></td>
+                <td className="list-item col-md-2 col-sm-2"><div className="add" onClick={addnew}>Add new</div></td>
+                <td className="list-item¨col-md-1 col-sm-1"></td>
               </tr>
             </tbody>
           </table>
