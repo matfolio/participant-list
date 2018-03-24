@@ -1,0 +1,123 @@
+*{
+	font-family:'georgia, sans serif';
+}
+
+.list {
+	text-align:left;
+
+}
+
+
+.list .list-item {
+	padding: 24px 0;	
+	line-height:24px;
+	color:505050;
+	font-size:16px;
+	font-weight:400;
+
+
+}
+.center {
+	padding:10px 0;
+}
+.operations {
+	fill:#909090;
+	height:24px;
+	cursor:pointer;
+	width: 24px;
+	text-align:center;
+}
+input {
+	background:#eee;
+	height:40px;
+	padding-left:10px;
+	box-sizing: content-box;
+	outline:none;
+	border:1px solid #eee;
+	border-radius:5px;
+	-ms-box-shadow:rgba(0,0,0,0.9),rgba(0,0,0,0.9);
+	-webkit-box-shadow:rgba(0,0,0,0.9),rgba(0,0,0,0.9);
+	box-shadow:rgba(0,0,0,0.9),rgba(0,0,0,1.9);
+}
+
+input:hover {
+	border-left:3px solid green;
+}
+
+.save {
+	background:#0077ff;
+	color:#fff;
+	font-size:16px;
+	font-weight:500;
+	cursor:pointer;
+	padding:12px;
+	text-align:center;
+	border-radius:5px;
+
+}
+.save:hover{
+	border-bottom:3px solid magenta;
+}
+.cancel {
+	background:#eee;
+	color:#076;
+	font-size:16px;
+	font-weight:500;
+	cursor:pointer;
+	padding:12px;
+	text-align:center;
+	margin-right:4px;
+	border-radius:5px;
+}
+.cancel:hover{
+	border-bottom:3px solid magenta;
+}
+.add {
+	text-align:center;
+	background:#eee;
+	font-size:16px;
+	font-weight:500;
+	padding:12px 0;
+	cursor:pointer;
+}
+.add:hover{
+	border-bottom:3px solid magenta;
+	color:green;
+}
+/* styles the RowContent Component*/
+.wrapper {
+	background:#fff;
+	margin-top:10px;
+	padding-left:24px;
+}
+/* styles the header Component*/
+.header {
+	background:#fff;
+	padding-left:16px;
+}
+
+/* styles the head of the RowContent component*/
+.head {
+	color:#757575;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 500;
+	padding:16px 0;
+
+}
+/* styles the content component */
+
+.container{
+	background:#eee;
+
+}
+
+body{
+	background:#eee;
+
+}
+
+.title{
+	text-align:left;
+	font-family:'lucida, sans serif';
+}
