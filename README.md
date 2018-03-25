@@ -1,9 +1,7 @@
 # Attendant-List App
-===================
 Built using plain Reactjs under certain datailed requirement.
 
 ### Introduction
-===============
 
 This simple attendant list app focus on listing bunch of list of attendant at a particular event having filled a form.I have built this app using reactjs and presently working on building the same concept with react-redux which would focus on a more realistic way of handling the state of an app. 
 
@@ -37,15 +35,25 @@ let props = {
 The main App component defines, implements and binds the following functions to React component:
 ```
     this.handleAddNew = this.handleAddNew.bind(this);
+    
     this.getName = this.getName.bind(this);
+    
     this.getPhoneNumber = this.getPhoneNumber.bind(this);
+    
     this.getEmail = this.getEmail.bind(this);
+    
     this.deleteRow = this.deleteRow.bind(this);
+    
     this.editRow = this.editRow.bind(this);
+    
     this.cancel = this.cancel.bind(this);
+    
     this.save = this.save.bind(this);
+    
     this.sort = this.sort.bind(this);
+    
     this.getId = this.getId.bind(this);
+    
     this.renderDefaultUser = this.renderDefaultUser.bind(this);
 ```
 The opeartions of the functions have been commented besides I have used semantic names for these functions
