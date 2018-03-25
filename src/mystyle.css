@@ -77,12 +77,16 @@ input:hover {
 	background:#eee;
 	font-size:16px;
 	font-weight:500;
-	padding:12px 0;
+	padding:10px 0;
 	cursor:pointer;
 }
 .add:hover{
 	border-bottom:3px solid magenta;
-	color:green;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	padding-bottom:7px;
+	color:#88BDBC;
 }
 /* styles the RowContent Component*/
 .wrapper {
