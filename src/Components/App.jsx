@@ -95,10 +95,10 @@ class App extends Component {
   	if(this.state.participant.length > 1 && this.state.ordercheck){
 	  		this.state.participant.sort(function(a,b){
 
-		  		if (a.fullname < b.fullname) {
+		  		if (a.fullname.toUpperCase() < b.fullname.toUpperCase()) {
 				    return -1;
 				}
-				if (a.fullname > b.fullname) {
+				if (a.fullname.toUpperCase() > b.fullname.toUpperCase()) {
 				    return 1;
 				}
 				return 0;
@@ -112,10 +112,10 @@ class App extends Component {
   	else if(this.state.participant.length > 1 && !this.state.ordercheck){
 	  		this.state.participant.sort(function(a,b){
 
-		  		if (b.fullname < a.fullname) {
+		  		if (b.fullname.toUpperCase() < a.fullname.toUpperCase()) {
 				    return -1;
 				}
-				if (b.fullname > a.fullname) {
+				if (b.fullname.toUpperCase() > a.fullname.toUpperCase()) {
 				    return 1;
 				}
 				return 0;
