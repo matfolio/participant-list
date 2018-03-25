@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 //import logo from '../logo.svg'; /* Not needed in this project*/
 import Content from './Content';
+import MOCK_DATA from '../MOCK_DATA';
 import _ from 'lodash';
 import '../App.css';
 
@@ -10,10 +11,10 @@ class App extends Component {
   	/* state footprint  */
   	this.state = {
   		participant: [],
+  		lastIndex:0,
   		edittable:-1,
   		ordercheck:true
   	}
-  	this.id=0;
 
   	/* Binding the respective methods to the component for 'this' values access */
 
@@ -37,15 +38,20 @@ class App extends Component {
   }
 
   renderDefaultUser(){
-  	const count = 20;
+  	/*const count = 20;
   	for(let i = 0; i < count; i++){
   		this.state.participant.push({id:i, 
 	  			fullname: "User" + i,
 	  			email: "user"+i + "@example.com",
 	  			phonenumber: '0451961260'
 	  	})
-  	}
-	 this.setState({participant: this.state.participant});
+  	}*/
+  	MOCK_DATA.forEach((data) =>{
+  		this.state.participant.push(data);
+  	})
+  	const length = this.state.participant.length;
+  	let id = this.state.participant[length-1].id;
+	this.setState({participant: this.state.participant,lastIndex:id});
 
   }
   /* 
@@ -55,25 +61,22 @@ class App extends Component {
   handleAddNew(){
   	//console.log(this.getName() + " " + this.getEmail() );
   	if(this.isAddable()){
-  		let id = this.getId();
+  		let id = this.state.lastIndex;
 	  	let fullname = this.getName();
 	  	let email = this.getEmail();
 	  	let phonenumber = this.getPhoneNumber();
 
+	  	id = ++id;
 	  	this.state.participant.push({id, 
 	  			fullname,
 	  			email,
 	  			phonenumber
 	  		})
 	  	this.setState({
-	  		participant: this.state.participant
-	  	})
+	  		participant: this.state.participant,lastIndex:id })
 	  	this.fullname.getFullNameFromHeaderNull();
 	  	this.phonenumber.getEmailFromHeaderNull();
 	  	this.email.getPhoneNumberFromHeaderNull();
-
-	  	//console.log(this.state.participant[0].id);
-	  	//console.log(this.state.participant.length);
 
   	}
 
@@ -88,7 +91,7 @@ class App extends Component {
   */
 
   sort(){
-
+  	console.log(this.state.lastIndex);
   	if(this.state.participant.length > 1 && this.state.ordercheck){
 	  		this.state.participant.sort(function(a,b){
 
@@ -104,7 +107,6 @@ class App extends Component {
 		  	//this.state.ordercheck = false;
 		  	this.setState({ordercheck: false,
 	  				  participant: this.state.participant})
-		  	console.log('sorted');
   	}
 
   	else if(this.state.participant.length > 1 && !this.state.ordercheck){
@@ -122,7 +124,6 @@ class App extends Component {
 		  	//this.state.ordercheck = true;
 		  	this.setState({ordercheck: true,
 	  				  participant: this.state.participant})
-		  	console.log('unsorted');
   	}
   
   }
@@ -142,8 +143,8 @@ class App extends Component {
   // set the ID incrementing on call to this function.
 
   getId(){
-  	//return this.state.id++;
-  	return this.setState({id:this.id++});
+  	let id = this.state.lastIndex;
+  	return this.setState({lastIndex:id++});
   }
 
   // Using the ref on react component instance, we 
@@ -187,7 +188,6 @@ class App extends Component {
   		this.state.participant.forEach((res,i) => {
   			if(res.id === index){
   				this.state.participant.splice(i,1);
-  				console.log(res.fullname + "And " + index);
   				this.setState({participant:this.state.participant});
   			}
   		});
@@ -217,7 +217,6 @@ class App extends Component {
 			&& obj.email.match(/@\w+.\w+$/) )
 		{
 			this.state.participant.splice(i,1,obj);
-			console.log(obj.fullname.length)
 		}
 
   	}.bind(this));
