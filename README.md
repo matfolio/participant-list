@@ -1,17 +1,15 @@
-#Attendant-List App
-===================
+# Attendant-List App
 Built using plain Reactjs under certain datailed requirement.
 
-###Introduction
-===============
+### Introduction
 
 This simple attendant list app focus on listing bunch of list of attendant at a particular event having filled a form.I have built this app using reactjs and presently working on building the same concept with react-redux which would focus on a more realistic way of handling the state of an app. 
 
 I have divided this app into components each handling a specific operation which all in the end are suspended into the main component for controlled state management.
 
-##Components
+## Components
 
-###App
+### App
 This section of the App does the main rendering of the App content. The content component instance in embedded in this component. Making use of ES6 rest and spread object to pass props into the react component `Content` instance.
 ```
 <Content  {...props}/>
@@ -37,20 +35,30 @@ let props = {
 The main App component defines, implements and binds the following functions to React component:
 ```
     this.handleAddNew = this.handleAddNew.bind(this);
+    
     this.getName = this.getName.bind(this);
+    
     this.getPhoneNumber = this.getPhoneNumber.bind(this);
+    
     this.getEmail = this.getEmail.bind(this);
+    
     this.deleteRow = this.deleteRow.bind(this);
+    
     this.editRow = this.editRow.bind(this);
+    
     this.cancel = this.cancel.bind(this);
+    
     this.save = this.save.bind(this);
+    
     this.sort = this.sort.bind(this);
+    
     this.getId = this.getId.bind(this);
+    
     this.renderDefaultUser = this.renderDefaultUser.bind(this);
 ```
 The opeartions of the functions have been commented besides I have used semantic names for these functions
 
-###Content
+### Content
 
 This component instance is embedded with other two components which I have passed to them the props passed from the main components(App) unto the Content component. It actually makes sense that I considering the hierachy of the source of data is from the main state of the app which is the state footprint.
 Embedding the needed components like this:
@@ -81,13 +89,16 @@ let {commit,addnew,edittable,edit,remove,cancel,save,sort} = this.props;
 ```
 
 
-###Header
+### Header
 This component displays the header of the app which contains section for adding a new person to the list. I have focus on some logic while implementing the component. I have used the ref for accessing the contents from the control boxes of course not considered as the best way to reference any DOM item. in this case the ref is used positively and over used besides this is a small scale app.
 
 ###RowContent
 The section which is used to render component to the table. This component instance is embeded in the Content component.
 
-###RowEdit
+### RowEdit
 
-[attendant-lsit App on Heroku]().
+[attendant-lsit App on Heroku](https://attendant-list.herokuapp.com/).
+
+<img width="970" alt="attendant_list" src="https://user-images.githubusercontent.com/14889124/37870371-0c5c8d04-2fc4-11e8-9746-b99b9dc955df.PNG">
+
 
